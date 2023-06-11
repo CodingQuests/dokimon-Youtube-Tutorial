@@ -1,0 +1,8 @@
+res://World.tscn
+res://Battle Scene/battle.tscn
+res://Monsters/PinkMon.tscn
+res://Battle Scene/UI.gd
+res://Battle Scene/battle.gd
+res://Battle Scene/MonsterUI.gd
+res://Monsters/PinkMon.gd
+res://Global/Game.gd

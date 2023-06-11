@@ -1,0 +1,82 @@
+2a60927148abd1d33b818b535e306557
+::res://::1686453918
+icon.svg::CompressedTexture2D::4793985208252150289::1686111922::1686111926::1::::<><>::
+player.gd::GDScript::-1::1686193054::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::2790832819916452295::1686435274::0::1::::<><>::res://player.gd<>uid://d0vb0dxq2caf0
+sheet.png::CompressedTexture2D::2625768654401063385::1686111991::1686111991::1::::<><>::
+World.tscn::PackedScene::6603630115239323487::1686453771::0::1::::<><>::uid://bdn7a5gftq4px<>uid://bf05ux1hao61h<>res://Monsters/DokiMon.gd
+::res://Battle Scene/::1686453772
+battle.gd::GDScript::-1::1686453771::0::1::::<>CanvasLayer<>::
+battle.tscn::PackedScene::8593332293324289359::1686453772::0::1::::<><>::res://Battle Scene/battle.gd<>uid://bqtomgcd6qflp<>uid://d2al4vf6d1ili<>res://Battle Scene/MonsterUI.gd<>res://Battle Scene/UI.gd
+MonsterUI.gd::GDScript::-1::1686450054::0::1::::<>Control<>::
+UI.gd::GDScript::-1::1686449563::0::1::::<>Control<>::
+::res://Free Sample/::1686415505
+cover.png::CompressedTexture2D::6544265898887549805::1686111997::1686112000::1::::<><>::
+Yana5x5.ttf::FontFile::3453763490791380084::1686111997::1686111998::1::::<><>::
+::res://Free Sample/Animations/::1686111998
+spr_blast_01_strip17.png::CompressedTexture2D::5648767029211180436::1686111997::1686111998::1::::<><>::
+spr_impact_01_strip7.png::CompressedTexture2D::1067222481376945641::1686111997::1686111998::1::::<><>::
+::res://Free Sample/Battle/::1686111998
+palette.png::CompressedTexture2D::5172027253428099417::1686111997::1686111998::1::::<><>::
+spr_battlebacks_free.png::CompressedTexture2D::7483413798690575813::1686111997::1686111998::1::::<><>::
+spr_battle_all_images_256x144png.png::CompressedTexture2D::1299180081041594838::1686111997::1686111998::1::::<><>::
+spr_battle_empty.png::CompressedTexture2D::3549537145062421609::1686111997::1686111998::1::::<><>::
+spr_battle_empty_with_text.png::CompressedTexture2D::2009238596351566467::1686111997::1686111998::1::::<><>::
+spr_battle_free.png::CompressedTexture2D::124831278783609552::1686111997::1686111998::1::::<><>::
+::res://Free Sample/Monsters/::1686111998
+nekosword_back.png::CompressedTexture2D::2309005600646465639::1686111997::1686111998::1::::<><>::
+spr_monsters_battle.png::CompressedTexture2D::2173222138271938115::1686111997::1686111998::1::::<><>::
+spr_monsters_mini.png::CompressedTexture2D::6654506546948126035::1686111997::1686111998::1::::<><>::
+::res://Free Sample/Tiles/::1686415496
+palette.png::CompressedTexture2D::7514407012216651871::1686111997::1686111998::1::::<><>::
+spr_external_free_tiles.png::CompressedTexture2D::2526885379957543331::1686111997::1686111998::1::::<><>::
+spr_external_free_tiles_compressed.png::CompressedTexture2D::2650126699646693986::1686111997::1686111998::1::::<><>::
+spr_npcs_index.png::CompressedTexture2D::5032584312612811640::1686111997::1686111998::1::::<><>::
+::res://Global/::1686452199
+Game.gd::GDScript::-1::1686452199::0::1::::<>Node<>::
+::res://Monsters/::1686453772
+DokiMon.gd::GDScript::-1::1686432519::0::1::::<>Area2D<>::
+GreenMon.tscn::PackedScene::5704833010432367642::1686434896::0::1::::<><>::res://Monsters/PinkMon.gd<>uid://57ywexb4q1ud<>uid://cmqkmrbetfve7<>uid://pg787c7r60wr
+PinkMon.gd::GDScript::-1::1686452352::0::1::::<>StaticBody2D<>::
+PinkMon.tscn::PackedScene::9055081616377764414::1686453772::0::1::::<><>::uid://57ywexb4q1ud<>res://Monsters/PinkMon.gd<>uid://cmqkmrbetfve7<>uid://pg787c7r60wr
+PurpleMon.tscn::PackedScene::4115811677519536843::1686434896::0::1::::<><>::uid://57ywexb4q1ud<>res://Monsters/PinkMon.gd<>uid://cmqkmrbetfve7<>uid://pg787c7r60wr
+::res://sprites/::1686193054
+::res://sprites/characters/::1686193054
+player.png::CompressedTexture2D::8957440630569435587::1686193054::1686193054::1::::<><>::
+skeleton.png::CompressedTexture2D::3984469930042731455::1686193054::1686193054::1::::<><>::
+slime.png::CompressedTexture2D::6407045155573703175::1686193054::1686193054::1::::<><>::
+::res://sprites/objects/::1686193054
+chest_01.png::CompressedTexture2D::6556529393930399240::1686193054::1686193054::1::::<><>::
+chest_02.png::CompressedTexture2D::7296616527712210174::1686193054::1686193054::1::::<><>::
+objects.png::CompressedTexture2D::5434483725015169364::1686193054::1686193054::1::::<><>::
+rock_in_water_01-sheet.png::CompressedTexture2D::249969635088389536::1686193054::1686193054::1::::<><>::
+rock_in_water_01.png::CompressedTexture2D::2448263337728392774::1686193054::1686193054::1::::<><>::
+rock_in_water_02.png::CompressedTexture2D::5862243236936257259::1686193054::1686193054::1::::<><>::
+rock_in_water_03.png::CompressedTexture2D::7979933801015507501::1686193054::1686193054::1::::<><>::
+rock_in_water_04.png::CompressedTexture2D::6703989844735871342::1686193054::1686193054::1::::<><>::
+rock_in_water_05.png::CompressedTexture2D::3321430785213960104::1686193054::1686193054::1::::<><>::
+rock_in_water_06.png::CompressedTexture2D::5407317455971765677::1686193054::1686193054::1::::<><>::
+::res://sprites/particles/::1686193054
+dust_particles_01.png::CompressedTexture2D::5889093293610274767::1686193054::1686193054::1::::<><>::
+::res://sprites/tilesets/::1686193054
+decor_8x8.png::CompressedTexture2D::1803998273555834774::1686193054::1686193054::1::::<><>::
+decor_16x16.png::CompressedTexture2D::1079144357889307463::1686193054::1686193054::1::::<><>::
+fences.png::CompressedTexture2D::5970639123155207597::1686193054::1686193054::1::::<><>::
+grass.png::CompressedTexture2D::7979786039241935110::1686193054::1686193054::1::::<><>::
+plains.png::CompressedTexture2D::7454156120654502537::1686193054::1686193054::1::::<><>::
+water1.png::CompressedTexture2D::864828767152644853::1686193054::1686193054::1::::<><>::
+water2.png::CompressedTexture2D::7880840738871809029::1686193054::1686193054::1::::<><>::
+water3.png::CompressedTexture2D::7334680486108876250::1686193054::1686193054::1::::<><>::
+water4.png::CompressedTexture2D::7999349848839370535::1686193054::1686193054::1::::<><>::
+water5.png::CompressedTexture2D::4984245091397116943::1686193054::1686193054::1::::<><>::
+water6.png::CompressedTexture2D::365378652025026226::1686193054::1686193054::1::::<><>::
+water_decorations.png::CompressedTexture2D::1049589222033781694::1686193054::1686193054::1::::<><>::
+water_lillies.png::CompressedTexture2D::8191939926286939106::1686193054::1686193054::1::::<><>::
+::res://sprites/tilesets/floors/::1686193054
+carpet.png::CompressedTexture2D::1601883382403499168::1686193054::1686193054::1::::<><>::
+flooring.png::CompressedTexture2D::5015112443866898543::1686193054::1686193054::1::::<><>::
+wooden.png::CompressedTexture2D::5161555611575990945::1686193054::1686193054::1::::<><>::
+::res://sprites/tilesets/walls/::1686193054
+walls.png::CompressedTexture2D::5616236067234452488::1686193054::1686193054::1::::<><>::
+wooden_door.png::CompressedTexture2D::8376215167893042410::1686193054::1686193054::1::::<><>::
+wooden_door_b.png::CompressedTexture2D::1620846469093989634::1686193054::1686193054::1::::<><>::
