@@ -1,6 +1,8 @@
-Panel
-GridContainer
+Label
 Control
+HBoxContainer
+GridContainer
+Panel
 VBoxContainer
 AnimationPlayer
 CanvasLayer
@@ -8,10 +10,8 @@ CollisionShape2D
 Area2D
 AnimatedSprite2D
 ProgressBar
-Label
 Marker2D
 Button
-HBoxContainer
 Node2D
 StaticBody2D
 Camera2D

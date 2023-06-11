@@ -1,0 +1,242 @@
+[gd_scene load_steps=9 format=3 uid="uid://d3gaemfkp4lkp"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_5y1bx"]
+[ext_resource type="Texture2D" uid="uid://c12q0rxj83ioh" path="res://Free Sample/Monsters/spr_monsters_mini.png" id="1_8d5ku"]
+[ext_resource type="Texture2D" uid="uid://57ywexb4q1ud" path="res://Free Sample/Monsters/spr_monsters_battle.png" id="3_s7jk4"]
+
+[sub_resource type="Animation" id="Animation_kxtf5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(512, 320)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(32, 32)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_lbbhy"]
+resource_name = "TransIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(32, 32), Vector2(1440, 1440)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(512, 320), Vector2(-128, -344)]
+}
+
+[sub_resource type="Animation" id="Animation_uf38x"]
+resource_name = "Transition"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(32, 32), Vector2(1440, 1440), Vector2(32, 32)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(512, 320), Vector2(-128, -344), Vector2(512, 320)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Panel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_judcd"]
+_data = {
+"RESET": SubResource("Animation_kxtf5"),
+"TransIn": SubResource("Animation_lbbhy"),
+"Transition": SubResource("Animation_uf38x")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_peogc"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 1024
+corner_radius_top_right = 1024
+corner_radius_bottom_right = 1024
+corner_radius_bottom_left = 1024
+
+[node name="UI" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_5y1bx")
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+autoplay = "RESET"
+libraries = {
+"": SubResource("AnimationLibrary_judcd")
+}
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+offset_left = 512.0
+offset_top = 320.0
+offset_right = 544.0
+offset_bottom = 352.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_peogc")
+
+[node name="BG" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.752941)
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 1096.0
+offset_bottom = 624.0
+metadata/_edit_lock_ = true
+
+[node name="Container" type="HBoxContainer" parent="BG"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 464.0
+offset_right = 1024.0
+offset_bottom = 560.0
+theme_override_constants/separation = 5
+
+[node name="DokiMon0" type="Panel" parent="BG/Container"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="SprMonstersMini" type="Sprite2D" parent="BG/Container/DokiMon0"]
+position = Vector2(48, 48)
+scale = Vector2(4.607, 4.857)
+texture = ExtResource("1_8d5ku")
+hframes = 6
+
+[node name="DokiMon1" type="Panel" parent="BG/Container"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="SprMonstersMini" type="Sprite2D" parent="BG/Container/DokiMon1"]
+position = Vector2(48, 48)
+scale = Vector2(4.607, 4.857)
+texture = ExtResource("1_8d5ku")
+hframes = 6
+
+[node name="DokiMon2" type="Panel" parent="BG/Container"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="SprMonstersMini" type="Sprite2D" parent="BG/Container/DokiMon2"]
+position = Vector2(48, 48)
+scale = Vector2(4.607, 4.857)
+texture = ExtResource("1_8d5ku")
+hframes = 6
+
+[node name="DokiMon3" type="Panel" parent="BG/Container"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="SprMonstersMini" type="Sprite2D" parent="BG/Container/DokiMon3"]
+position = Vector2(48, 48)
+scale = Vector2(4.607, 4.857)
+texture = ExtResource("1_8d5ku")
+hframes = 6
+
+[node name="Info" type="Control" parent="BG"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -40.0
+offset_top = -32.0
+offset_right = -40.0
+offset_bottom = -32.0
+
+[node name="Name" type="Label" parent="BG/Info"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 1096.0
+offset_bottom = 130.0
+theme_override_font_sizes/font_size = 64
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Desc" type="Label" parent="BG/Info"]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 176.0
+offset_right = 896.0
+offset_bottom = 296.0
+theme_override_font_sizes/font_size = 64
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Icon" type="Sprite2D" parent="BG/Info"]
+position = Vector2(368, 280)
+scale = Vector2(3, 3)
+texture = ExtResource("3_s7jk4")
+hframes = 6
+
+[connection signal="gui_input" from="BG/Container/DokiMon0" to="." method="_on_doki_mon_gui_input" binds= [0]]
+[connection signal="gui_input" from="BG/Container/DokiMon1" to="." method="_on_doki_mon_gui_input" binds= [1]]
+[connection signal="gui_input" from="BG/Container/DokiMon2" to="." method="_on_doki_mon_gui_input" binds= [2]]
+[connection signal="gui_input" from="BG/Container/DokiMon3" to="." method="_on_doki_mon_gui_input" binds= [3]]

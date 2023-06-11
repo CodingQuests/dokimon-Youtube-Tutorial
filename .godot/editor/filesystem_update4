@@ -1,8 +1,7 @@
+res://ui.tscn
+res://Free Sample/Default.tres
 res://World.tscn
-res://Battle Scene/battle.tscn
-res://Monsters/PinkMon.tscn
-res://Battle Scene/UI.gd
+res://ui.gd
 res://Battle Scene/battle.gd
-res://Battle Scene/MonsterUI.gd
-res://Monsters/PinkMon.gd
-res://Global/Game.gd
+res://Battle Scene/battle.tscn
+res://Global/Utils.gd

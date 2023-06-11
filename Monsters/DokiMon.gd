@@ -5,12 +5,12 @@ var battle = preload("res://Battle Scene/battle.tscn")
 
 func _on_body_entered(body):
 	if "Player" in body.name:
-		$"../CanvasLayer/Anim".play("Transition")
+		$"../UI/Anim".play("Transition")
 		get_tree().paused = true
 
 func _process(delta):
-	if $"../CanvasLayer/Anim".current_animation == "Transition":
-		if $"../CanvasLayer/Anim".get_current_animation_position() >= 1.5:
+	if $"../UI/Anim".current_animation == "Transition":
+		if $"../UI/Anim".get_current_animation_position() >= 1.5:
 			var battleTemp = battle.instantiate()
 			
 			get_parent().add_child(battleTemp)

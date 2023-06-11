@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://c1c328u44gf2v"]
+[gd_scene load_steps=8 format=3 uid="uid://c1c328u44gf2v"]
 
 [ext_resource type="Texture2D" uid="uid://bdn7a5gftq4px" path="res://sheet.png" id="1_5qx67"]
 [ext_resource type="PackedScene" uid="uid://bf05ux1hao61h" path="res://player.tscn" id="2_4o7s5"]
 [ext_resource type="Script" path="res://Monsters/DokiMon.gd" id="3_4soba"]
+[ext_resource type="PackedScene" uid="uid://d3gaemfkp4lkp" path="res://ui.tscn" id="4_2sk0t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6dkdx"]
 texture = ExtResource("1_5qx67")
@@ -403,126 +404,6 @@ sources/0 = SubResource("TileSetAtlasSource_6dkdx")
 [sub_resource type="CircleShape2D" id="CircleShape2D_4y0pg"]
 radius = 23.0
 
-[sub_resource type="Animation" id="Animation_kxtf5"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(512, 320)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(32, 32)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_lbbhy"]
-resource_name = "TransIn"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(32, 32), Vector2(1440, 1440)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(512, 320), Vector2(-128, -344)]
-}
-
-[sub_resource type="Animation" id="Animation_uf38x"]
-resource_name = "Transition"
-length = 3.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(32, 32), Vector2(1440, 1440), Vector2(32, 32)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5, 3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(512, 320), Vector2(-128, -344), Vector2(512, 320)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Panel:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_judcd"]
-_data = {
-"RESET": SubResource("Animation_kxtf5"),
-"TransIn": SubResource("Animation_lbbhy"),
-"Transition": SubResource("Animation_uf38x")
-}
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_peogc"]
-bg_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 1024
-corner_radius_top_right = 1024
-corner_radius_bottom_right = 1024
-corner_radius_bottom_left = 1024
-
 [node name="World" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -568,22 +449,6 @@ script = ExtResource("3_4soba")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DokiMon"]
 shape = SubResource("CircleShape2D_4y0pg")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-process_mode = 3
-layer = 2
-
-[node name="Anim" type="AnimationPlayer" parent="CanvasLayer"]
-autoplay = "RESET"
-libraries = {
-"": SubResource("AnimationLibrary_judcd")
-}
-
-[node name="Panel" type="Panel" parent="CanvasLayer"]
-visible = false
-offset_left = 512.0
-offset_top = 320.0
-offset_right = 544.0
-offset_bottom = 352.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_peogc")
+[node name="UI" parent="." instance=ExtResource("4_2sk0t")]
 
 [connection signal="body_entered" from="DokiMon" to="DokiMon" method="_on_body_entered"]

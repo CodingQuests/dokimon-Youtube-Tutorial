@@ -3,7 +3,6 @@ extends CanvasLayer
 
 
 var selected = 0
-var playerTurn = true
 
 func _ready():
 	$UI/Menu.hide()
@@ -26,20 +25,18 @@ func MonsterTurn():
 	var damage = randi_range(10,15)
 	await get_tree().create_timer(2).timeout
 	if $Enemy.get_child(0).Health <= 0:
+		Game.addEXP(10)
 		get_tree().paused = false
 		queue_free()
 	$Player.get_child(selected).hit("Blast", damage)
 	$Action.text = "Enemy " + $Enemy.get_child(0).name + " Has attacked using BLAST for " + str(damage) +" hp"
 	Game.SelectedDokiMons[0]["Health"] -= damage
 	await get_tree().create_timer(2).timeout
-	playerTurn = true
 	$UI/Menu/VBoxContainer/Fight.grab_focus()
 	$UI/Menu.show()
 	
-
-
 func _on_flee_pressed():
-	$"../CanvasLayer/Anim".play("Transition")
+	$"../UI/Anim".play("Transition")
 	await get_tree().create_timer(1.5).timeout
 	queue_free()
 	get_tree().paused = false
@@ -55,5 +52,6 @@ func _on_attack_pressed(extra_arg_0):
 func _on_capture_pressed():
 	if $Enemy.get_child(0).Health <= 10:
 		$Enemy.get_child(0).capture()
+		Game.addEXP(10)
 	else:
 		$Action.text = "The Enemy Dokimon's Health is not low enough!"
