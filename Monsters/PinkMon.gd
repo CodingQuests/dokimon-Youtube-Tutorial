@@ -22,7 +22,6 @@ func _on_attack_animation_finished():
 	$Aim/Attack.hide()
 
 func capture():
-	Game.addDokiMon(self.name)
 	$AnimationPlayer.play("Capture", -1,3)
 	await $AnimationPlayer.animation_finished
 	get_parent().get_parent()._on_flee_pressed()

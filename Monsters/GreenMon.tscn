@@ -249,7 +249,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="PinkMon" type="StaticBody2D"]
+[node name="GreenMon" type="StaticBody2D"]
 scale = Vector2(3, 3)
 script = ExtResource("1_s6yyq")
 

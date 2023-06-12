@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://duow6sbliaai6"]
+[gd_scene load_steps=11 format=3 uid="uid://duow6sbliaai6"]
 
 [ext_resource type="Script" path="res://Battle Scene/battle.gd" id="1_fujum"]
 [ext_resource type="Texture2D" uid="uid://bqtomgcd6qflp" path="res://Free Sample/Battle/spr_battle_empty.png" id="2_eb71n"]
-[ext_resource type="PackedScene" uid="uid://d2al4vf6d1ili" path="res://Monsters/PinkMon.tscn" id="5_j8xcf"]
 [ext_resource type="Script" path="res://Battle Scene/MonsterUI.gd" id="6_it1h4"]
 [ext_resource type="Script" path="res://Battle Scene/UI.gd" id="6_orkxw"]
 
@@ -69,8 +68,6 @@ vertical_alignment = 1
 
 [node name="Enemy" type="Node2D" parent="."]
 position = Vector2(800, 304)
-
-[node name="PinkMon" parent="Enemy" instance=ExtResource("5_j8xcf")]
 
 [node name="Action" type="Label" parent="."]
 offset_left = 32.0

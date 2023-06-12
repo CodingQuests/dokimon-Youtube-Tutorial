@@ -22,7 +22,7 @@ func _process(_delta):
 	$HPtxt.text = str(Game.SelectedDokiMons[get_parent().selected]["Health"]) 
 	#SET ATTACK NAMES
 	for i in Game.SelectedDokiMons[get_parent().selected]["Attacks"]:
-		var path = "Fight/VBoxContainer/Attack " + str((i+1))
+		var path = "Fight/VBoxContainer/Attack " + str(((i)+1))
 		get_node(path).text = Game.SelectedDokiMons[get_parent().selected]["Attacks"][i]["Name"]
 	#SET DOKIMON NAMES
 	

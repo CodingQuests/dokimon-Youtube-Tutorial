@@ -3,15 +3,9 @@ extends Node
 const SAVE_PATH: String = "res://savegame.bin"
 const SAVE_PASS: String = "password"
 
-
 func save_game() -> void:
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
-	var data: Dictionary = {
-		"PlayerClass": Game.PlayerClass,
-		"gold": Game.gold,
-		"intro": Game.intro,
-	}
-	var jstr = JSON.stringify(data)
+	var jstr = JSON.stringify(Game.SelectedDokiMons)
 	file.store_line(jstr)
 
 
@@ -25,11 +19,9 @@ func load_game() -> void:
 	if FileAccess.file_exists(SAVE_PATH) == true:
 		if not file.eof_reached():
 			var current_line = JSON.parse_string(file.get_line())
-			if current_line:
-				Game.PlayerClass = current_line["PlayerClass"]
-				Game.gold = current_line["gold"]
-				Game.intro = current_line["intro"]
+			for i in current_line:
+				Game.addDokiMon(current_line[i]["Name"])
+				Game.SelectedDokiMons[int(i)]["Level"] = current_line[i]["Level"]
+				Game.SelectedDokiMons[int(i)]["Exp"] = current_line[i]["Exp"]
+				Game.SelectedDokiMons[int(i)]["MaxExp"] = current_line[i]["MaxExp"]
 
-func PlayerIdle():
-	if has_node("/root/Forest/BG/Player/Anim"):
-		get_tree().root.get_child(5).get_node("BG/Player/Anim").play("Idle")

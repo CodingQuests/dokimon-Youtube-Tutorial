@@ -1,5 +1,10 @@
 extends Node
 
+func _ready():
+	#addDokiMon("PinkMon")
+	#Utils.save_game()
+	Utils.load_game()
+	pass
 var dataBaseDokiMons = {
 	0: {
 		"Name": "PinkMon",
@@ -95,76 +100,16 @@ var dataBaseDokiMons = {
 		}
 	},
 }
+
 var SelectedDokiMons = {
-	0: {
-		"Name": "PinkMon",
-		"Frame": 0,
-		"Health" : 100,
-		"Level" : 1,
-		"Exp" : 0,
-		"MaxExp" : 10,
-		"Strength" : 10,
-		"Defense" : 5,
-		"Scene" : preload("res://Monsters/PinkMon.tscn"),
-		"Attacks":{
-			0 : {
-				"Name": "Blast",
-				"Target" : "Monster",
-				"Damage" : 10,
-				"cost" : 2
-			},
-			1 : {
-				"Name": "Clash",
-				"Target" : "Monster",
-				"Damage" : 10,
-				"cost" : 2
-			},
-			2 : {
-				"Name": "Impact",
-				"Target" : "Monster",
-				"Damage" : 10,
-				"cost" : 2
-			}
-		}
-	},
-	1: {
-		"Name": "GreenMon",
-		"Frame": 2,
-		"Health" : 100,
-		"Level" : 1,
-		"Exp" : 0,
-		"MaxExp" : 10,
-		"Strength" : 10,
-		"Defense" : 5,
-		"Scene" : preload("res://Monsters/GreenMon.tscn"),
-		"Attacks":{
-			0 : {
-				"Name": "Blast",
-				"Target" : "Monster",
-				"Damage" : 10,
-				"cost" : 2
-			},
-			1 : {
-				"Name": "Clash",
-				"Target" : "Monster",
-				"Damage" : 10,
-				"cost" : 2
-			},
-			2 : {
-				"Name": "Impact",
-				"Target" : "Monster",
-				"Damage" : 10,
-				"cost" : 2
-			}
-		}
-	},
+
 }
 
 func addDokiMon(Name):
 	for i in dataBaseDokiMons:
 		if dataBaseDokiMons[i]["Name"] == Name:
-			SelectedDokiMons[SelectedDokiMons.size()] = dataBaseDokiMons[i]
-
+			var tempDic = dataBaseDokiMons[i].duplicate(true)
+			SelectedDokiMons[SelectedDokiMons.size()] = tempDic
 
 func addEXP(amount):
 	for i in SelectedDokiMons:
