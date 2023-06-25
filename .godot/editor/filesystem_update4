@@ -1,7 +1,3 @@
-res://World.tscn
+res://Monsters/PinkMon.tscn
 res://Free Sample/Default.tres
-res://ui.tscn
 res://Battle Scene/battle.tscn
-res://Battle Scene/battle.gd
-res://Battle Scene/MonsterUI.gd
-res://Monsters/GreenMon.tscn

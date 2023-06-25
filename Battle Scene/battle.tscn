@@ -91,7 +91,6 @@ scale = Vector2(3, 3)
 script = ExtResource("6_orkxw")
 
 [node name="Menu" type="HBoxContainer" parent="UI"]
-visible = false
 layout_mode = 0
 offset_left = 10.6667
 offset_right = 127.667
