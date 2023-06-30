@@ -28,7 +28,6 @@ func _process(_delta):
 	
 	
 func _on_switch_pressed():
-	
 	$Menu.hide()
 	$Switch.show()
 	$Fight.hide()
@@ -47,6 +46,7 @@ func _on_dokimon_pressed(extra_arg_0):
 	get_node(path).show()
 	switchUpdate()
 	get_parent().MonsterTurn()
+	
 func switchUpdate():
 	for i in 3:
 		var path = "Switch/VBoxContainer/Dokimon " + str((i+1))

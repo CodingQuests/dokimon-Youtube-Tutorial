@@ -46,7 +46,7 @@ func MonsterTurn():
 		queue_free()
 	$Player.get_child(selected).hit("Blast", damage)
 	$Action.text = "Enemy " + $Enemy.get_child(0).name + " Has attacked using BLAST for " + str(damage) +" hp"
-	Game.SelectedDokiMons[0]["Health"] -= damage
+	Game.SelectedDokiMons[selected]["Health"] -= damage
 	await get_tree().create_timer(2).timeout
 	$UI/Menu/VBoxContainer/Fight.grab_focus()
 	$UI/Menu.show()

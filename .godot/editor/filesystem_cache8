@@ -1,20 +1,20 @@
 2a60927148abd1d33b818b535e306557
-::res://::1687569465
+::res://::1688049579
 icon.svg::CompressedTexture2D::4793985208252150289::1687280527::1687280556::1::::<><>::
 player.gd::GDScript::-1::1687280527::0::1::::<>CharacterBody2D<>::
 player.tscn::PackedScene::2790832819916452295::1687280527::0::1::::<><>::res://player.gd<>uid://d0vb0dxq2caf0
 sheet.png::CompressedTexture2D::2625768654401063385::1687280527::1687280527::1::::<><>::
 ui.gd::GDScript::-1::1687280527::0::1::::<>CanvasLayer<>::
 ui.tscn::PackedScene::9136943721123964135::1687280559::0::1::::<><>::res://ui.gd<>uid://c12q0rxj83ioh<>uid://57ywexb4q1ud
-World.tscn::PackedScene::6603630115239323487::1687280559::0::1::::<><>::uid://bdn7a5gftq4px<>uid://bf05ux1hao61h<>res://Monsters/DokiMon.gd<>uid://d3gaemfkp4lkp
-::res://Battle Scene/::1687280559
-battle.gd::GDScript::-1::1687280527::0::1::::<>CanvasLayer<>::
-battle.tscn::PackedScene::8593332293324289359::1687280559::0::1::::<><>::res://Battle Scene/battle.gd<>uid://bqtomgcd6qflp<>res://Battle Scene/MonsterUI.gd<>res://Battle Scene/UI.gd
+World.tscn::PackedScene::6603630115239323487::1688009549::0::1::::<><>::uid://bdn7a5gftq4px<>uid://bf05ux1hao61h<>res://Monsters/DokiMon.gd<>uid://d3gaemfkp4lkp
+::res://Battle Scene/::1688009549
+battle.gd::GDScript::-1::1688009549::0::1::::<>CanvasLayer<>::
+battle.tscn::PackedScene::8593332293324289359::1688009549::0::1::::<><>::res://Battle Scene/battle.gd<>uid://bqtomgcd6qflp<>res://Battle Scene/MonsterUI.gd<>res://Battle Scene/UI.gd
 MonsterUI.gd::GDScript::-1::1687280527::0::1::::<>Control<>::
-UI.gd::GDScript::-1::1687280527::0::1::::<>Control<>::
-::res://Free Sample/::1687280559
+UI.gd::GDScript::-1::1687966769::0::1::::<>Control<>::
+::res://Free Sample/::1687965234
 cover.png::CompressedTexture2D::6544265898887549805::1687280527::1687280527::1::::<><>::
-Default.tres::Theme::682247318819776206::1687280559::0::1::::<><>::uid://cy08ypbcjlgg7
+Default.tres::Theme::682247318819776206::1687965234::0::1::::<><>::uid://cy08ypbcjlgg7
 GUI.png::CompressedTexture2D::6511030367863878508::1687280527::1687280527::1::::<><>::
 Yana5x5.ttf::FontFile::3453763490791380084::1687280527::1687280527::1::::<><>::
 ::res://Free Sample/Animations/::1687280527
@@ -36,14 +36,14 @@ palette.png::CompressedTexture2D::7514407012216651871::1687280527::1687280527::1
 spr_external_free_tiles.png::CompressedTexture2D::2526885379957543331::1687280527::1687280527::1::::<><>::
 spr_external_free_tiles_compressed.png::CompressedTexture2D::2650126699646693986::1687280527::1687280527::1::::<><>::
 spr_npcs_index.png::CompressedTexture2D::5032584312612811640::1687280527::1687280527::1::::<><>::
-::res://Global/::1687280527
-Game.gd::GDScript::-1::1687280527::0::1::::<>Node<>::
+::res://Global/::1688008254
+Game.gd::GDScript::-1::1688008254::0::1::::<>Node<>::
 Utils.gd::GDScript::-1::1687280527::0::1::::<>Node<>::
-::res://Monsters/::1687280560
+::res://Monsters/::1688007347
 DokiMon.gd::GDScript::-1::1687280527::0::1::::<>Area2D<>::
 GreenMon.tscn::PackedScene::5704833010432367642::1687280560::0::1::::<><>::res://Monsters/PinkMon.gd<>uid://57ywexb4q1ud<>uid://cmqkmrbetfve7<>uid://pg787c7r60wr
 PinkMon.gd::GDScript::-1::1687280527::0::1::::<>StaticBody2D<>::
-PinkMon.tscn::PackedScene::9055081616377764414::1687280527::0::1::::<><>::uid://57ywexb4q1ud<>res://Monsters/PinkMon.gd<>uid://cmqkmrbetfve7<>uid://pg787c7r60wr
+PinkMon.tscn::PackedScene::9055081616377764414::1688007347::0::1::::<><>::uid://57ywexb4q1ud<>res://Monsters/PinkMon.gd<>uid://cmqkmrbetfve7<>uid://pg787c7r60wr
 PurpleMon.tscn::PackedScene::4115811677519536843::1687280527::0::1::::<><>::uid://57ywexb4q1ud<>res://Monsters/PinkMon.gd<>uid://cmqkmrbetfve7<>uid://pg787c7r60wr
 ::res://sprites/::1687280527
 ::res://sprites/characters/::1687280527
